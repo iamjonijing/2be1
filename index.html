@@ -32,6 +32,30 @@
       <!-- Switcher Only -->
       <link rel="stylesheet" id="switcher-css" type="text/css" href="switcher/css/switcher.css" media="all" />
       <!-- END Switcher Styles -->
+      <!-- GA Connector -->
+      <script data-cfasync="false" type="text/javascript" src="https://tracker.gaconnector.com/gaconnector.js"></script>
+      <script>
+         function setGaconnectorHiddenFields() {
+            var gaFields = gaconnector.getCookieValues();
+            for (var fieldName in gaFields) {
+               var selectors = 'form input[name="' + fieldName + '"], form input#' + fieldName + ', form input#field_' + fieldName + ', form input[name="' + fieldName.toLowerCase() + '"], form input#' + fieldName.toLowerCase() + ', form input#field_' + fieldName.toLowerCase();
+               selectors += 'form textarea[name="' + fieldName + '"], form textarea#' + fieldName + ', form textarea#field_' + fieldName + ', form textarea[name="' + fieldName.toLowerCase() + '"], form textarea#' + fieldName.toLowerCase() + ', form textarea#field_' + fieldName.toLowerCase() + ', form textarea.' + fieldName + ', form textarea[name="param[' + fieldName + ']"]' + ", form textarea[id^='field_" + fieldName + "']";
+               var inputs = document.querySelectorAll(selectors);
+               if (inputs === null) {
+                  continue;
+               } else if (typeof inputs.length === 'undefined') {
+                  inputs.value = gaFields[fieldName];
+               } else {
+                  for (var i = 0; i < inputs.length; i++) {
+                     inputs[i].value = gaFields[fieldName];
+                  }
+               }
+            }
+         }
+
+         gaconnector.setCallback(setGaconnectorHiddenFields);
+         setInterval(setGaconnectorHiddenFields, 1000);
+      </script>
 </head>
    <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
       <!-- Load Facebook SDK for JavaScript -->
@@ -871,21 +895,184 @@
                   <!-- Comments Form -->
                   <!-- <div class="row"> -->
                      <div class="col-md-8 col-centered">
-                        <form action="POST" data-netlify="true">
+                        <!-- <form action="POST" data-netlify="true"> -->
                         <!-- <div class="media well comment-form"> -->
                            <!-- <h5>Leave a Comment:</h5> -->
                            <!-- Form Starts -->
-                           <div class="form-group margin1">
+                           <!-- <div class="form-group margin1">
                               <label>Full Name<span class="required">*</span></label>
                               <input type="text" name="name" class="form-control input-field" required="">
                               <label>Contact Number <span class="required">*</span></label>
                               <input type="number" name="contact" class="form-control input-field" required="">
                               <label>Message<span class="required">*</span></label>
                               <textarea name="comment" id="comment" class="textarea-field form-control" rows="3" required=""></textarea>
-                           </div>
-                           <button type="submit" id="send" value="Submit" class="btn">Submit</button>
+                           </div> -->
+
+                           <!-- <button type="submit" id="send" value="Submit" class="btn">Submit</button> -->
                         <!-- </div> -->
-                        </form>
+                        <!-- </form> -->
+                        <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+                        <!-- Note :
+                           - You can modify the font style and form style to suit your website. 
+                           - Code lines with comments ���Do not remove this code���  are required for the form to work properly, make sure that you do not remove these lines of code. 
+                           - The Mandatory check script can modified as to suit your business needs. 
+                           - It is important that you test the modified form before going live.-->
+                        <div id='crmWebToEntityForm' style='width:600px;margin:auto;'>
+                           <META HTTP-EQUIV='content-type' CONTENT='text/html;charset=UTF-8'>
+                           <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads4088091000000249001 method='POST'
+                              onSubmit='javascript:document.charset="UTF-8"; return checkMandatory4088091000000249001()' accept-charset='UTF-8'>
+                              <input type='text' style='display:none;' name='xnQsjsdp'
+                                 value='bab065a9668582eeca5610787cfa3452ae2844cb449cdcda95d0933c40ddeae1'></input>
+                              <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
+                              <input type='text' style='display:none;' name='xmIwtLD'
+                                 value='7d1c629e0cba916a56c5f68ebac04d0e533a5f3759c30ad2cc8c9fe972bf3017'></input>
+                              <input type='text' style='display:none;' name='actionType' value='TGVhZHM='></input>
+                              <input type='text' style='display:none;' name='returnURL' value='https://2be1.netlify.com'> </input><br></br>
+                              <!-- Do not remove this code. -->
+                              <style>
+                                 tr,
+                                 td {
+                                    padding: 6px;
+                                    border-spacing: 0px;
+                                    border-width: 0px;
+                                 }
+                              </style>
+                              <table style='width:600px;background-color:#ffffff;background-color:white;color:black'>
+                                 <tr>
+                                    <td colspan='2' align='left' style='color:black;font-family:Arial;font-size:14px;'>
+                                       <strong>GaConnectorTask</strong></td>
+                                 </tr> <br></br>
+                                 <tr>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>First Name</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='100' name='Country' /></td>
+                                 </tr>
+                                 <tr>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>Last Name<span
+                                          style='color:red;'>*</span></td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='80' name='Last Name' /></td>
+                                 </tr>
+                                 <tr>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>Email</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='100' name='Email' /></td>
+                                 </tr>
+                                 <tr>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>Company<span
+                                          style='color:red;'>*</span></td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='100' name='Company' /></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Last Click Channel</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF1'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Last Click Content</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF7'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Last Click Landing Page
+                                    </td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF8'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Last Click Medium</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF3'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Last Click Referrer
+                                    </td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF4'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Last Click Source</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF2'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Last Click Term</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF5'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Latitude</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF28'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Longitude</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF29'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Number of Website
+                                       Visits</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF20'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>First Click Source</td>
+                                    <td style='width:250px;'><input type='text' style='width:250px;' maxlength='255' name='LEADCF10'
+                                          value=''></input></td>
+                                 </tr>
+                                 <tr style='display:none;'>
+                                    <td style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%'>Pages Visited </td>
+                                    <td> <textarea name='LEADCF21' maxlength='32000' style='width:250px;'>&nbsp;</textarea>
+                                 </tr>
+                        
+                                 <tr>
+                                    <td colspan='2' style='text-align:center; padding-top:15px;font-size:12px;'>
+                                       <input style='font-size:12px;color:black' id='formsubmit' type='submit' value='Submit'></input> <input
+                                          type='reset' name='reset' style='font-size:12px;color:black' value='Reset'></input> </td>
+                                 </tr>
+                              </table>
+                              <script>
+                                 var mndFileds = new Array('Company', 'Last Name');
+                                 var fldLangVal = new Array('Company', 'Last Name');
+                                 var name = '';
+                                 var email = '';
+
+                                 function checkMandatory4088091000000249001() {
+                                    for (i = 0; i < mndFileds.length; i++) {
+                                       var fieldObj = document.forms['WebToLeads4088091000000249001'][mndFileds[i]];
+                                       if (fieldObj) {
+                                          if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
+                                             if (fieldObj.type == 'file') {
+                                                alert('Please select a file to upload.');
+                                                fieldObj.focus();
+                                                return false;
+                                             }
+                                             alert(fldLangVal[i] + ' cannot be empty.');
+                                             fieldObj.focus();
+                                             return false;
+                                          } else if (fieldObj.nodeName == 'SELECT') {
+                                             if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
+                                                alert(fldLangVal[i] + ' cannot be none.');
+                                                fieldObj.focus();
+                                                return false;
+                                             }
+                                          } else if (fieldObj.type == 'checkbox') {
+                                             if (fieldObj.checked == false) {
+                                                alert('Please accept  ' + fldLangVal[i]);
+                                                fieldObj.focus();
+                                                return false;
+                                             }
+                                          }
+                                          try {
+                                             if (fieldObj.name == 'Last Name') {
+                                                name = fieldObj.value;
+                                             }
+                                          } catch (e) { }
+                                       }
+                                    }
+                                    document.getElementById('formsubmit').disabled = true;
+                                 }
+                              </script>
+                           </form>
+                        </div>
                      </div>
                      <!-- /col-md-7 -->
                   <!-- </div> -->
