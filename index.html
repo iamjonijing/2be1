@@ -35,30 +35,7 @@
       
 </head>
    <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-      <!-- GA Connector -->
-      <script data-cfasync="false" type="text/javascript" src="https://tracker.gaconnector.com/gaconnector.js"></script>
-      <script>
-         function setGaconnectorHiddenFields() {
-            var gaFields = gaconnector.getCookieValues();
-            for (var fieldName in gaFields) {
-               var selectors = 'form input[name="' + fieldName + '"], form input#' + fieldName + ', form input#field_' + fieldName + ', form input[name="' + fieldName.toLowerCase() + '"], form input#' + fieldName.toLowerCase() + ', form input#field_' + fieldName.toLowerCase();
-               selectors += 'form textarea[name="' + fieldName + '"], form textarea#' + fieldName + ', form textarea#field_' + fieldName + ', form textarea[name="' + fieldName.toLowerCase() + '"], form textarea#' + fieldName.toLowerCase() + ', form textarea#field_' + fieldName.toLowerCase() + ', form textarea.' + fieldName + ', form textarea[name="param[' + fieldName + ']"]' + ", form textarea[id^='field_" + fieldName + "']";
-               var inputs = document.querySelectorAll(selectors);
-               if (inputs === null) {
-                  continue;
-               } else if (typeof inputs.length === 'undefined') {
-                  inputs.value = gaFields[fieldName];
-               } else {
-                  for (var i = 0; i < inputs.length; i++) {
-                     inputs[i].value = gaFields[fieldName];
-                  }
-               }
-            }
-         }
-
-         gaconnector.setCallback(setGaconnectorHiddenFields);
-         setInterval(setGaconnectorHiddenFields, 1000);
-      </script>
+      
       <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
       <script>
@@ -894,306 +871,41 @@
             <!-- well -->
             <div class="col-lg-7 well">
                <div id="rsvp_form">
-                  <!-- Comments Form -->
-                  <!-- <div class="row"> -->
-                     <!-- <div class="col-md-8 col-centered"> -->
-                        <!-- <form action="POST" data-netlify="true"> -->
-                        <!-- <div class="media well comment-form"> -->
-                           <!-- <h5>Leave a Comment:</h5> -->
-                           <!-- Form Starts -->
-                           <!-- <div class="form-group margin1">
+                  <!-- Comments Form  -->
+                  <div class="row">
+                     <div class="col-md-8 col-centered">
+                        <form action="POST" data-netlify="true">
+                        <div class="media well comment-form"> 
+                           <h5>Leave a Comment:</h5>
+                            <!-- Form Starts -->
+                           <div class="form-group margin1">
                               <label>Full Name<span class="required">*</span></label>
                               <input type="text" name="name" class="form-control input-field" required="">
                               <label>Contact Number <span class="required">*</span></label>
                               <input type="number" name="contact" class="form-control input-field" required="">
                               <label>Message<span class="required">*</span></label>
                               <textarea name="comment" id="comment" class="textarea-field form-control" rows="3" required=""></textarea>
-                           </div> -->
+                           </div>
 
-                           <!-- <button type="submit" id="send" value="Submit" class="btn">Submit</button> -->
-                        <!-- </div> -->
-                        <!-- </form> -->
-                        <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
-                        <!-- Note :
-                           - You can modify the font style and form style to suit your website. 
-                           - Code lines with comments ���Do not remove this code���  are required for the form to work properly, make sure that you do not remove these lines of code. 
-                           - The Mandatory check script can modified as to suit your business needs. 
-                           - It is important that you test the modified form before going live.-->
-                        <div id="crmWebToEntityForm" style="width:600px;margin:auto;">
-                           <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-                        
-                           <form action="https://crm.zoho.com/crm/WebToLeadForm" name="WebToLeads4038965000000230184" method="POST"
-                              onsubmit="javascript:document.charset=&quot;UTF-8&quot;; return checkMandatory4038965000000230184()"
-                              accept-charset="UTF-8">
-                              <input type="text" style="display:none;" name="xnQsjsdp"
-                                 value="1611c5715fdda5886cbf7e17b3092397b694996bde30f929f5e0f5e89d5af1b5">
-                              <input type="hidden" name="zc_gad" id="zc_gad" value="">
-                              <input type="text" style="display:none;" name="xmIwtLD"
-                                 value="68b073d266c9d73acdd4f11f8dfbebbb456b941866f5d565fa642536efcb49ec">
-                              <input type="text" style="display:none;" name="actionType" value="TGVhZHM=">
-                              <input type="text" style="display:none;" name="returnURL" value="https://taskatconnector.000webhostapp.com/">
-                        
-                              <!-- Do not remove this code. -->
-                        
-                              <style>
-                                 tr,
-                                 td {
-                                    <br />padding: 6px;
-                                    <br />border-spacing: 0px;
-                                    <br />border-width: 0px;
-                                    <br />
-                                 }
-                        
-                                 <br />
-                              </style>
-                              <table style="width:600px;background-color:#ffffff;background-color:white;color:black">
-                                 <tbody>
-                                    <tr>
-                                       <td colspan="2" align="left" style="color:black;font-family:Arial;font-size:14px;"><strong>My Task for
-                                             GaConnector</strong></td>
-                                    </tr>
-                                    <tr>
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;">Full Name<span
-                                             style="color:red;">*</span></td>
-                                       <td style="width:250px;"><input type="text" style="width:250px;" maxlength="80" name="Last Name"></td>
-                                    </tr>
-                                    <tr>
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;">Company<span
-                                             style="color:red;">*</span></td>
-                                       <td style="width:250px;"><input type="text" style="width:250px;" maxlength="100" name="Company"></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">All Traffic Sources
-                                       </td>
-                                       <td style="width:250px;"><input id="all_traffic_sources" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF27" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Browser</td>
-                                       <td style="width:250px;"><input id="browser" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF22" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">City (from IP
-                                          address)</td>
-                                       <td style="width:250px;"><input id="city" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF24" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Country (from IP
-                                          address)</td>
-                                       <td style="width:250px;"><input id="country" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF25" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">First Click Campaign
-                                       </td>
-                                       <td style="width:250px;"><input id="fc_campaign" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF14" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">First Click Channel
-                                       </td>
-                                       <td style="width:250px;"><input id="fc_channel" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF9" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">First Click Content
-                                       </td>
-                                       <td style="width:250px;"><input type="text" style="width:250px;" maxlength="255" name="LEADCF15"
-                                             value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">First Click Term
-                                       </td>
-                                       <td style="width:250px;"><input id="fc_content" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF13" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">First Click Source
-                                       </td>
-                                       <td style="width:250px;"><input id="fc_source" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF10" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">First Click Referrer
-                                       </td>
-                                       <td style="width:250px;"><input id="fc_referrer" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF12" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">First Click Medium
-                                       </td>
-                                       <td style="width:250px;"><input id="fc_medium" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF11" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">First Click Landing
-                                          Page</td>
-                                       <td style="width:250px;"><input id="fc_landing" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF16" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">GA Client ID</td>
-                                       <td style="width:250px;"><input id="GA_Client_ID" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF17" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">IP Address</td>
-                                       <td style="width:250px;"><input id="ip_address" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF18" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Last Click Channel
-                                       </td>
-                                       <td style="width:250px;"><input id="lc_channel" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF1" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Last Click Landing
-                                          Page</td>
-                                       <td style="width:250px;"><input id="lc_landing" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF8" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Last Click Source
-                                       </td>
-                                       <td style="width:250px;"><input id="lc_source" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF2" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Last Click Term</td>
-                                       <td style="width:250px;"><input id="lc_term" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF5" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Last Click Medium
-                                       </td>
-                                       <td style="width:250px;"><input id="lc_medium" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF3" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Last Click Referrer
-                                       </td>
-                                       <td style="width:250px;"><input id="lc_referrer" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF4" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Last Click Content
-                                       </td>
-                                       <td style="width:250px;"><input id="lc_content" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF7" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Last Click Campaign
-                                       </td>
-                                       <td style="width:250px;"><input id="lc_campaign" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF6" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Longitude</td>
-                                       <td style="width:250px;"><input id="longitude" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF29" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Latitude</td>
-                                       <td style="width:250px;"><input id="latitude" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF28" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Number of Website
-                                          Visits</td>
-                                       <td style="width:250px;"><input id="page_visits" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF20" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Operating System
-                                       </td>
-                                       <td style="width:250px;"><input id="OS" type="text" style="width:250px;" maxlength="255" name="LEADCF23"
-                                             value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Pages Visited</td>
-                                       <td> <textarea id="pages_visited_list" name="LEADCF21" maxlength="32000"
-                                             style="width:250px;">&nbsp;</textarea></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Time Spent on
-                                          Website</td>
-                                       <td style="width:250px;"><input id="time_passed" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF19" value=""></td>
-                                    </tr>
-                                    <tr style="display:none;">
-                                       <td style="nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:50%">Time Zone</td>
-                                       <td style="width:250px;"><input id="time_zone" type="text" style="width:250px;" maxlength="255"
-                                             name="LEADCF26" value=""></td>
-                                    </tr>
-                                    <tr>
-                                       <td colspan="2" style="text-align:center; padding-top:15px;font-size:12px;">
-                                          <input style="font-size:12px;color:black" id="formsubmit" type="submit" value="Submit"> <input
-                                             type="reset" name="reset" style="font-size:12px;color:black" value="Reset"></td>
-                                    </tr>
-                                 </tbody>
-                              </table>
-                              <script><br />
-                                 var mndFileds = new Array('Company', 'Last Name'); <br />
-                                 var fldLangVal = new Array('Company', 'Full Name'); <br />
-                                 var name = ''; <br />
-                                 var email = '';</p >
-                                    <p> 	  function checkMandatory4038965000000230184() {<br />
-                        		for(i=0;i<mndFileds.length; i++) {
-                        		  var fieldObj=document.forms['WebToLeads4038965000000230184'][mndFileds[i]];
-                        		  if(fieldObj) {
-                        			if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
-                        			 if(fieldObj.type =='file')
-                        				{
-                                          alert('Please select a file to upload.');
-                                       fieldObj.focus();
-                                       return false;
-                                      }
-                                   alert(fldLangVal[i] +' cannot be empty.');
-                                               fieldObj.focus();
-                                               return false;
-                        			}  else if(fieldObj.nodeName=='SELECT') {
-                          	   	   	 if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
-                                          alert(fldLangVal[i] + ' cannot be none.');
-                                       fieldObj.focus();
-                                       return false;
-                                       }
-                        			} else if(fieldObj.type =='checkbox'){
-                         	 	 	 if(fieldObj.checked == false){
-                                          alert('Please accept  ' + fldLangVal[i]);
-                                       fieldObj.focus();
-                                       return false;
-                                       }
-                                     }
-                        			 try {
-                        			     if(fieldObj.name == 'Last Name') {
-                                          name = fieldObj.value;
-                                       }
-                        			} catch (e) {}
-                        		    }
-                                   }
-                                   document.getElementById('formsubmit').disabled=true;
-                                }
-                              </script>
-                        <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
-                     <!-- </div> -->
-                     <!-- /col-md-7 -->
+                           <button type="submit" id="send" value="Submit" class="btn">Submit</button>
+                        </div>
+                         </form>
+                  <!-- </div> -->
+                  <!-- /col-md-7 -->
                   <!-- </div> -->
                   <!-- /row -->
                   <!-- /Form-group -->
                   <!-- Contact results -->
                   <div id="contact_results"></div>
-               </div>
-               <!-- /rsvp form-->
-            </div>
-            <!-- /well-->
-         </div>
-         <!-- /container -->
-      </section>
-      <!-- /Section ends -->
-      <!-- Footer -->		
+                  </div>
+                  <!-- /rsvp form-->
+                  </div>
+                  <!-- /well-->
+                  </div>
+                  <!-- /container -->
+                  </section>
+                  <!-- /Section ends -->
+                  <!-- Footer -->
       <footer>
          <div class="container">
             <div class="col-md-12 text-center">
